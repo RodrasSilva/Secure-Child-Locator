@@ -1,0 +1,41 @@
+<PreferenceScreen xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <PreferenceCategory app:title="@string/pairing_header">
+
+        <Preference
+            app:fragment="pt.ulisboa.tecnico.guardianapp.view.fragment.PairFragment"
+            app:key="pairing"
+            app:summary="@string/pairing_summary"
+            app:title="@string/pairing_title" />
+
+    </PreferenceCategory>
+
+    <PreferenceCategory app:title="@string/location_header">
+
+        <ListPreference
+            app:key="interval"
+            app:title="@string/location_updates_title"
+            app:summary="@string/location_updates_summary"
+            app:defaultValue="@string/location_updates_default"
+            app:entries="@array/interval_entries"
+            app:entryValues="@array/interval_entries_values"/>
+
+    </PreferenceCategory>
+
+    <PreferenceCategory app:title="@string/safe_zone_header">
+
+        <EditTextPreference
+            app:key="radius"
+            app:summary="@string/radius_summary"
+            app:title="@string/radius_title"
+            app:defaultValue="@string/radius_default"/>
+
+        <Preference
+            app:fragment="pt.ulisboa.tecnico.guardianapp.view.fragment.SafeZoneFragment"
+            app:key="fence"
+            app:summary="@string/safe_zone_summary"
+            app:title="@string/safe_zone_title" />
+
+    </PreferenceCategory>
+
+</PreferenceScreen>

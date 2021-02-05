@@ -1,0 +1,46 @@
+syntax = "proto3";
+
+package service;
+
+option java_multiple_files = true;
+option java_package = "pt.ulisboa.tecnico.sirs.grpc";
+
+service ServerService {
+  rpc registerGuardian(RegisterRequest) returns (StatusResponse);
+  rpc addLocation(AddLocationRequest) returns (StatusResponse);
+  rpc getLocation(LocationRequest) returns (LocationResponse);
+  rpc getLocationHistory(LocationRequest) returns (stream LocationResponse);
+  rpc updateLocation (LocationRequest) returns (stream LocationResponse);
+  rpc childSOS(SOSMessage) returns (StatusResponse);
+}
+
+message RegisterRequest{
+  string childId = 1;
+  string guardianId = 2;
+}
+
+message AddLocationRequest {
+  string childId = 1;
+  string location = 2;
+}
+
+message LocationRequest {
+  string guardianId = 1;
+  string childId = 2;
+}
+
+message LocationResponse {
+  string location = 1;
+}
+
+message SOSMessage {
+//  bytes pubKey = 1; //
+  string child_id = 1;
+  string location = 2;
+  string message = 3;
+//  string timestamp = 5;
+}
+
+message StatusResponse {
+  bool success = 1;
+}

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.fragment.PairFragment">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/scanBtn">
+
+        <ImageView
+            android:id="@+id/qr_code_frame"
+            android:layout_width="365dp"
+            android:layout_height="615dp"
+            android:layout_marginVertical="@dimen/fab_margin"
+            android:contentDescription="@string/qr_code_frame_content_description"
+            android:scaleType="fitXY"
+            android:src="@drawable/ic_scan_me"
+            android:layout_gravity="center_horizontal"
+            app:layout_constraintBottom_toTopOf="@id/scanBtn"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/qr_code"
+            android:layout_width="300dp"
+            android:layout_height="300dp"
+            android:layout_marginVertical="36dp"
+            android:scaleType="fitXY"
+            android:src="@color/transparent"
+            android:layout_gravity="center_horizontal"
+            app:layout_constraintStart_toStartOf="@id/qr_code_frame"
+            app:layout_constraintEnd_toEndOf="@id/qr_code_frame"
+            app:layout_constraintTop_toTopOf="@id/qr_code_frame"
+            android:contentDescription="@string/qr_code_content_description" />
+    </FrameLayout>
+
+    <Button
+        android:id="@+id/scanBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/scan_button_text"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

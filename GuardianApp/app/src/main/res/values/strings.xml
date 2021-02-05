@@ -1,0 +1,43 @@
+<resources>
+    <string name="app_name">GuardianApp</string>
+    <string name="action_settings">Settings</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="main_fragment_label">Main Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+
+    <string name="hello_first_fragment">Main Fragment</string>
+    <string name="title_activity_settings">Settings</string>
+
+    <!-- Preference Titles -->
+    <string name="pairing_header">Pairing</string>
+    <string name="safe_zone_header">Safe Zone</string>
+    <string name="location_header">Location</string>
+
+    <!-- Pairing Preferences -->
+    <string name="pairing_title">Pair</string>
+    <string name="pairing_summary">Scan the child\'s QR Code</string>
+
+    <!-- Location Updates Preferences -->
+    <string name="location_updates_title">Location updates</string>
+    <string name="location_updates_summary">Choose the interval for location updates</string>
+    <string name="location_updates_default">15</string>
+
+    <!-- Safe Zone Preferences -->
+    <string name="radius_title">Radius</string>
+    <string name="radius_summary">Enter in meters the radius of the child\'s safe zone</string>
+    <string name="radius_default">100</string>
+    <string name="safe_zone_title">Location</string>
+    <string name="safe_zone_summary">Choose on map the safe zone location</string>
+    <string name="safe_zone_btn_text">Done</string>
+
+    <!-- Tab Names -->
+    <string name="tab_text_1">Current</string>
+    <string name="tab_text_2">History</string>
+
+    <!-- Pairing Fragment Resources -->
+    <string name="qr_code_content_description">QR Code</string>
+    <string name="qr_code_frame_content_description">QR Code Frame</string>
+    <string name="scan_button_text">SCAN Code</string>
+
+</resources>

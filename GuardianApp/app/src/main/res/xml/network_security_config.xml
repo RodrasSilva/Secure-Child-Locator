@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<network-security-config>
+    <domain-config>
+        <domain includeSubdomains="true">35.181.154.3</domain>
+        <trust-anchors>
+            <certificates src="@raw/ca"/>
+        </trust-anchors>
+    </domain-config>
+</network-security-config>
+
